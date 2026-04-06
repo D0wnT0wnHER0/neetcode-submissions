@@ -1,0 +1,17 @@
+Goal:
+Find the maximum length substring where we can replace at most k characters
+to make all characters the same.
+
+Key Formula:
+window_size - maxFreq <= k
+
+Brute Force Approach:
+- Fix starting index i
+- Expand ending index j
+- Use a map to store character frequencies
+- Track maxFreq (most frequent char in current window)
+- If valid (window_size - maxFreq <= k), update result
+
+Key Insight:
+Only the most frequent character matters.
+All other characters must be <= k to replace.
